@@ -43,10 +43,10 @@ model = keras.Sequential(
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 model.summary()
 
-model.fit(X_train, y_train, batch_size=32, epochs=10)
+model.fit(X_train, y_train, batch_size=32, epochs=20)
 
 print("Evaluate on test data")
 results = model.evaluate(X_test, y_test, batch_size=40)
 print("test loss, test acc:", results)
 
-model.save('./my_model_dense.keras')
+model.save('./my_model_dense_long.keras')
